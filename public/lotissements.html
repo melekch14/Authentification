@@ -5,11 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
-	<meta name="author" content="AdminKit">
-	<meta name="keywords"
-		content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
-
+	
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
@@ -18,6 +14,7 @@
 	<title>Blank Page | AdminKit Demo</title>
 
 	<link href="css/app.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -34,7 +31,7 @@
 						Menu
 					</li>
 
-					<li class="sidebar-item active">
+					<li class="sidebar-item">
 						<a class="sidebar-link" href="index.html">
 							<i class="align-middle" data-feather="sliders"></i> <span
 								class="align-middle">Tableau de bord</span>
@@ -46,10 +43,10 @@
 							<i class="align-middle" data-feather="layers"></i>
 							<span class="align-middle">Gestion des données</span>
 						</a>
-						<div class="collapse" id="submenu">
+						<div class="collapse show" id="submenu">
 							<ul class="sidebar-dropdown list-unstyled">
-								<li class="sidebar-item">
-									<a class="sidebar-link" href="lotissements.html">
+								<li class="sidebar-item active">
+									<a class="sidebar-link" href="#">
 										<i class="align-middle" data-feather="circle"></i>
 										<span class="align-middle">Lotissements</span>
 									</a>
@@ -108,18 +105,85 @@
 
 			<main class="content">
 				<div class="container-fluid p-0">
-
 					<div class="row">
 						<div class="col-12">
-							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Empty card</h5>
+						  <div class="card border">
+							<div class="card-header">
+								<h5 class="card-title">Lotissements</h5>
+							  </div>
+							<div class="card-body">
+							  <form>
+								<div class="row">
+								  <div class="col-md-6">
+									<div class="form-group">
+									  <label for="lotissement_nom" class="form-label">Nom lotissement</label>
+									  <input class="form-control" type="text" id="lotissement_nom" placeholder="Nom lotissement">
+									  <span class="fa fa-user" aria-hidden="true"></span>
+									</div>
+								  </div>
+								  <div class="col-md-6">
+									<div class="form-group">
+									  <label for="lotissement_location" class="form-label">Localisation lotissement</label>
+									  <input class="form-control" type="text" id="lotissement_location" placeholder="Last Name">
+									  <span class="fa fa-user form-control-feedback" aria-hidden="true"></span>
+									</div>
+								  </div>
+								  <div class="col-md-12">
+									<div class="form-group">
+									  <label for="placeTextarea" class="form-label">Description Lotissement</label>
+									  <textarea class="form-control" id="lotissement_description" rows="3" placeholder="Bio"></textarea>
+									</div>
+								  </div>
+								  <div class="col-md-12 stbtn">
+									<div class="form-group">
+									  <button type="button" id="save_lotissement" class="btn btn-success">Enregistrer</button>
+									  <button type="button" class="btn btn-warning">Vider</button>
+									  <button type="button" class="btn btn-danger">Supprimer</button>
+									</div>
+								  </div>
 								</div>
-								<div class="card-body">
-								</div>
+							  </form>
 							</div>
+						  </div>
 						</div>
-					</div>
+					  </div>
+
+					  <div class="row mt-4">
+						<div class="col-12">
+						  <div class="card border">
+							<div class="card-header">
+							  <h5 class="card-title">Lotissements</h5>
+							</div>
+							<div class="card-body">
+							  <table class="table table-bordered">
+								<thead>
+								  <tr>
+									<th scope="col">Nom lotissement</th>
+									<th scope="col">Localisation lotissement</th>
+									<th scope="col">Description Lotissement</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <!-- Sample data row -->
+								  <tr>
+									<td>Lotissement 1</td>
+									<td>Location 1</td>
+									<td>Description 1</td>
+								  </tr>
+								  <!-- Sample data row -->
+								  <tr>
+									<td>Lotissement 2</td>
+									<td>Location 2</td>
+									<td>Description 2</td>
+								  </tr>
+								  <!-- Add more data rows here -->
+								</tbody>
+							  </table>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					  
 
 				</div>
 			</main>
@@ -159,7 +223,7 @@
 
 	<script src="js/app.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="scripts/dashboard.js"></script>
+	<script src="scripts/lotissement.js"></script>
 
 </body>
 

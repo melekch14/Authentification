@@ -14,9 +14,7 @@ exports.register = (req, res) => {
         if (err) throw err;
 
         User.createUser(username, hash, (userId) => {
-          const token = jwt.sign({ userId }, 'melekch', { expiresIn: '1h' });
-
-          res.status(201).json({ message: 'User registered', token });
+          res.status(201).json({ message: 'User registered', userId });
         });
       });
     }
