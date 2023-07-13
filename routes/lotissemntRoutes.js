@@ -4,10 +4,10 @@ const lotissemntController = require('../controllers/lotissemntController');
 
 const router = express.Router();
 
-router.get('/', lotissemntController.getAllLotissemnts);
-router.get('/:id', lotissemntController.getLotissemntById);
-router.post('/', lotissemntController.createLotissemnt);
-router.put('/:id', lotissemntController.updateLotissemnt);
-router.delete('/:id', lotissemntController.deleteLotissemnt);
+router.get('/getAll', lotissemntController.getAllLotissemnts);
+router.get('/getById/:id', lotissemntController.getLotissemntById);
+router.post('/create', lotissemntController.createLotissemnt);
+router.put('/update/:id', lotissemntController.updateLotissemnt);
+router.delete('/delete/:id', lotissemntController.deleteLotissemnt);
 
 module.exports = router;
